@@ -2,7 +2,7 @@
 
 public class TransportPris
 {
-    public double BeregnTransportpris(double afstand, double vægt)
+    public int BeregnTransportpris(double afstand, double vægt)
     {
         if (afstand < 5)
         {

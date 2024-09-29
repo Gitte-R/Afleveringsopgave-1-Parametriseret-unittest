@@ -14,11 +14,17 @@ namespace Afleveringsopgave_1___Parametriseret_unittest
         [InlineData(4, 10, 50)]
         [InlineData(5, 9, 75)]
         [InlineData(10, 10, 100)]
-        public void BeregnTransportPris(double afstand, double vægt, double pris)
-        {
-            TransportPris Pris1 = new TransportPris();
 
-            Assert.Equal(Pris1.BeregnTransportpris(afstand, vægt), pris);
+        public void BeregnTransportPris(double afstand, double vægt, int pris)
+        {
+            //Arrange
+            TransportPris sut = new TransportPris();
+
+            //Act 
+            int beregnetPris = sut.BeregnTransportpris(afstand, vægt);
+
+            //Assert
+            Assert.Equal(beregnetPris, pris);
         }   
     }
 }
